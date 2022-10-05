@@ -10,7 +10,7 @@ import Combine
 
 enum FDJApi {
     static let network = Network()
-    static let base = URL(string: "https://www.thesportsdb.com/api/v1/json/50130162")!
+    static let base = URL(string: kBaseURL)!
 }
 
 extension FDJApi {

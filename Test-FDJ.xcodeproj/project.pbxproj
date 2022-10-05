@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		912A78C028ED640F00B9022C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912A78BF28ED640F00B9022C /* Constants.swift */; };
 		9140AF4728E5D83900731B5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9140AF4628E5D83900731B5F /* AppDelegate.swift */; };
 		9140AF4928E5D83900731B5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9140AF4828E5D83900731B5F /* SceneDelegate.swift */; };
 		9140AF4B28E5D83900731B5F /* LeagueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9140AF4A28E5D83900731B5F /* LeagueViewController.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		912A78BF28ED640F00B9022C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9140AF4328E5D83900731B5F /* Test-FDJ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Test-FDJ.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9140AF4628E5D83900731B5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9140AF4828E5D83900731B5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			children = (
 				9140AF5E28E5DAFE00731B5F /* Network.swift */,
 				9140AF6028E5DBB400731B5F /* FDJApi.swift */,
+				912A78BF28ED640F00B9022C /* Constants.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				9140AF6E28E6F6AC00731B5F /* TeamPresenter.swift in Sources */,
 				9140AF5F28E5DAFE00731B5F /* Network.swift in Sources */,
 				9140AF6728E6061F00731B5F /* TeamCollectionViewCell.swift in Sources */,
+				912A78C028ED640F00B9022C /* Constants.swift in Sources */,
 				9140AF4928E5D83900731B5F /* SceneDelegate.swift in Sources */,
 				9140AF6328E5E68A00731B5F /* TeamsPresenter.swift in Sources */,
 			);
