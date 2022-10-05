@@ -15,8 +15,7 @@ class TeamDetailViewController: UIViewController {
     @IBOutlet weak var leagueLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
-    private var cancellables = [AnyCancellable]()
-
+    
     private var presenter:TeamDetailPresenter?
 
     override func viewDidLoad() {
@@ -24,12 +23,16 @@ class TeamDetailViewController: UIViewController {
     }
     
     func updateUI(teamState:TeamState) {
+        if let banner = teamState.banner, let url = URL(string: banner) {
+            bannerImageView.load(url: url, placeholder: UIImage(named: "placeholder"), shouldCacheImage:false) { downloadedImage in
+                self.bannerImageView.image = downloadedImage
+            }
+        }
         leagueLabel.text = teamState.league
         descriptionLabel.text = teamState.description
         nameLabel.text = teamState.name
         self.title = teamState.name
     }
-    
     
     func set(teamName:String) {
         presenter = TeamDetailPresenter(self)
