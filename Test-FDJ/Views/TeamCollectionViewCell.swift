@@ -16,15 +16,21 @@ class TeamCollectionViewCell: UICollectionViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        imageView.image = nil
     }
     
     func set(state:TeamState) {
-        if let logo = state.logo, let logoURL = URL(string:logo) {
-            
-            imageView.load(url: logoURL, placeholder: UIImage(named: "placeholder"), shouldCacheImage:false) { downloadedImage in
-                self.imageView.image = downloadedImage
-            }
+        imageView.image = nil
+
+        if let logo = state.logo {
+            self.restorationIdentifier = logo
+            imageView.loadImageWithCombine(url: logo)
+                .receive(on: DispatchQueue.main)
+                .sink(receiveCompletion: { _ in print("") }, receiveValue: { [weak self] value in
+                    if value.id == self?.restorationIdentifier {
+                        self?.imageView.image = value.0
+                    }
+                })
+                .store(in: &cancellables)
         }
     }
 }
