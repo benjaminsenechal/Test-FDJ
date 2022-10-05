@@ -9,13 +9,17 @@ import Foundation
 import Combine
 import UIKit
 
+protocol LeaguesViewPresenter {
+    init(_ viewController:LeagueViewController)
+    func getTeams(name:String)
+}
 
-class TeamsPresenter {
+class LeaguesPresenter : LeaguesViewPresenter {
     private var cancellables = [AnyCancellable]()
     private weak var viewController : LeagueViewController?
     let teamState: CurrentValueSubject<[TeamState], Never> = CurrentValueSubject([TeamState]())
     
-    init(_ viewController : LeagueViewController) {
+    required init(_ viewController:LeagueViewController) {
         self.viewController = viewController
         
         self.teamState.sink(receiveValue: { [weak self] teamState in

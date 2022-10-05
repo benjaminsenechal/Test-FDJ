@@ -13,13 +13,12 @@ class LeagueViewController: UIViewController, UICollectionViewDataSource, UIColl
     @IBOutlet weak var emptyStateView: UIView!
     
     private var items = [TeamState]()
-    private var cancellables = [AnyCancellable]()
-    private var presenter:TeamsPresenter?
+    private var presenter:LeaguesPresenter?
     private var router = HomeRouter()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.presenter = TeamsPresenter(self)
+        self.presenter = LeaguesPresenter(self)
         self.presenter?.getTeams(name: "French ligue 1")
 
         self.router.leagueViewController = self

@@ -16,12 +16,12 @@
 		9140AF5328E5D83C00731B5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9140AF5128E5D83C00731B5F /* LaunchScreen.storyboard */; };
 		9140AF5F28E5DAFE00731B5F /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9140AF5E28E5DAFE00731B5F /* Network.swift */; };
 		9140AF6128E5DBB400731B5F /* FDJApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9140AF6028E5DBB400731B5F /* FDJApi.swift */; };
-		9140AF6328E5E68A00731B5F /* TeamsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9140AF6228E5E68A00731B5F /* TeamsPresenter.swift */; };
+		9140AF6328E5E68A00731B5F /* LeaguesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9140AF6228E5E68A00731B5F /* LeaguesPresenter.swift */; };
 		9140AF6528E6058300731B5F /* TeamState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9140AF6428E6058300731B5F /* TeamState.swift */; };
 		9140AF6728E6061F00731B5F /* TeamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9140AF6628E6061F00731B5F /* TeamCollectionViewCell.swift */; };
 		9140AF6A28E6DB7D00731B5F /* UIImage+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9140AF6928E6DB7D00731B5F /* UIImage+utils.swift */; };
 		9140AF6C28E6F49E00731B5F /* TeamDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9140AF6B28E6F49E00731B5F /* TeamDetailViewController.swift */; };
-		9140AF6E28E6F6AC00731B5F /* TeamPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9140AF6D28E6F6AC00731B5F /* TeamPresenter.swift */; };
+		9140AF6E28E6F6AC00731B5F /* TeamDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9140AF6D28E6F6AC00731B5F /* TeamDetailPresenter.swift */; };
 		9140AF7228EAC53500731B5F /* Teams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9140AF7128EAC53500731B5F /* Teams.swift */; };
 		9196DA3228EC570A001AC015 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9196DA3128EC570A001AC015 /* HomeRouter.swift */; };
 /* End PBXBuildFile section */
@@ -38,12 +38,12 @@
 		9140AF5428E5D83C00731B5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9140AF5E28E5DAFE00731B5F /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		9140AF6028E5DBB400731B5F /* FDJApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDJApi.swift; sourceTree = "<group>"; };
-		9140AF6228E5E68A00731B5F /* TeamsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsPresenter.swift; sourceTree = "<group>"; };
+		9140AF6228E5E68A00731B5F /* LeaguesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesPresenter.swift; sourceTree = "<group>"; };
 		9140AF6428E6058300731B5F /* TeamState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamState.swift; sourceTree = "<group>"; };
 		9140AF6628E6061F00731B5F /* TeamCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCollectionViewCell.swift; sourceTree = "<group>"; };
 		9140AF6928E6DB7D00731B5F /* UIImage+utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+utils.swift"; sourceTree = "<group>"; };
 		9140AF6B28E6F49E00731B5F /* TeamDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailViewController.swift; sourceTree = "<group>"; };
-		9140AF6D28E6F6AC00731B5F /* TeamPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamPresenter.swift; sourceTree = "<group>"; };
+		9140AF6D28E6F6AC00731B5F /* TeamDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailPresenter.swift; sourceTree = "<group>"; };
 		9140AF7128EAC53500731B5F /* Teams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teams.swift; sourceTree = "<group>"; };
 		9196DA3128EC570A001AC015 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,8 +116,8 @@
 		9140AF5C28E5DA1600731B5F /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				9140AF6228E5E68A00731B5F /* TeamsPresenter.swift */,
-				9140AF6D28E6F6AC00731B5F /* TeamPresenter.swift */,
+				9140AF6228E5E68A00731B5F /* LeaguesPresenter.swift */,
+				9140AF6D28E6F6AC00731B5F /* TeamDetailPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -227,12 +227,12 @@
 				9140AF4728E5D83900731B5F /* AppDelegate.swift in Sources */,
 				9196DA3228EC570A001AC015 /* HomeRouter.swift in Sources */,
 				9140AF6128E5DBB400731B5F /* FDJApi.swift in Sources */,
-				9140AF6E28E6F6AC00731B5F /* TeamPresenter.swift in Sources */,
+				9140AF6E28E6F6AC00731B5F /* TeamDetailPresenter.swift in Sources */,
 				9140AF5F28E5DAFE00731B5F /* Network.swift in Sources */,
 				9140AF6728E6061F00731B5F /* TeamCollectionViewCell.swift in Sources */,
 				912A78C028ED640F00B9022C /* Constants.swift in Sources */,
 				9140AF4928E5D83900731B5F /* SceneDelegate.swift in Sources */,
-				9140AF6328E5E68A00731B5F /* TeamsPresenter.swift in Sources */,
+				9140AF6328E5E68A00731B5F /* LeaguesPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

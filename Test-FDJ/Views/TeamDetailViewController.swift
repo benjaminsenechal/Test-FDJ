@@ -16,8 +16,7 @@ class TeamDetailViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     
-    private var presenter:TeamPresenter?
-    private var cancellables = [AnyCancellable]()
+    private var presenter:TeamDetailPresenter?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +35,7 @@ class TeamDetailViewController: UIViewController {
     }
     
     func set(teamName:String) {
-        presenter = TeamPresenter(self)
+        presenter = TeamDetailPresenter(self)
         presenter?.getTeam(name: teamName)
     }
 

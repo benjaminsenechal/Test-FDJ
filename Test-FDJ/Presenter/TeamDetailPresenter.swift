@@ -9,13 +9,17 @@ import Foundation
 import Combine
 import UIKit
 
-class TeamPresenter {
+protocol TeamsDetailViewPresenter {
+    init(_ viewController:TeamDetailViewController)
+    func getTeam(name:String)
+}
+
+class TeamDetailPresenter : TeamsDetailViewPresenter{
     private var cancellables = [AnyCancellable]()
     private weak var viewController : TeamDetailViewController?
     let teamState: CurrentValueSubject<TeamState?, Never> = CurrentValueSubject(nil)
-
     
-    init(_ viewController : TeamDetailViewController) {
+    required init(_ viewController : TeamDetailViewController) {
         self.viewController = viewController
         
         self.teamState.sink(receiveCompletion: { _ in
